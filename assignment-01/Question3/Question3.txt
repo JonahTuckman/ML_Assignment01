@@ -1,0 +1,6 @@
+A. 
+	Information Gain(S, T) = (3/9)(1-(1/3)) + (6/9)(1-(2/6)) = 2/3 = .667
+	Information Gain(S, H) = (5/9)(1-(4/5)) + (4/9)(1-(3/4)) = 2/9 = .222
+	Information Gain(S, H) = (4/9)(1-(4/4)) + (4/9)(1-(1/4)) + (1/9)(1-(0/1)) = 4/9 = .444
+	Information Gain(S, D) = (2/9)(1-(1/2)) + (1/9)(1-(1/1)) + (3/9)(1-(2/3)) = (3/9)(1-(1/3)) = 4/9 = .444
+B. According to the attributes that I found above, the rood node would be The Technology feature. This is not synonymous with the decision tree I found using Information Gain alongside Entropy. 
