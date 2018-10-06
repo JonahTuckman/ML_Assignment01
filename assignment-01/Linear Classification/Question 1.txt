@@ -1,0 +1,12 @@
+1. 
+	X1	X2	X3	X4 	o
+	1	0	1	1	1
+	0	1	0	1	1
+	0	0	1	0	-1
+
+I found the linear classifier to be w1X1 + w2X2 + w3X3 + w4X4 + b = o with the following values. 
+	w1 = 1
+	w2 = -1
+	w3 = -2
+	w4 = 1
+	b  = 1
