@@ -10,3 +10,4 @@ I found the linear classifier to be w1X1 + w2X2 + w3X3 + w4X4 + b = o with the f
 	w3 = -2
 	w4 = 1
 	b  = 1
+2. Although my classifier was correct towards the original dataset, when the additional 14 sets were introduced only one of these were classified correctly, thus over the new set of size 17, 4/17 or 24% were classified correctly. 
