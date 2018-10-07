@@ -1,4 +1,5 @@
 1. 
+		Original Set
 	X1	X2	X3	X4 	o
 	1	0	1	1	1
 	0	1	0	1	1
@@ -10,4 +11,31 @@ I found the linear classifier to be w1X1 + w2X2 + w3X3 + w4X4 + b = o with the f
 	w3 = -2
 	w4 = 1
 	b  = 1
-2. Although my classifier was correct towards the original dataset, when the additional 14 sets were introduced only one of these were classified correctly, thus over the new set of size 17, 4/17 or 24% were classified correctly. 
+
+		Extended Set
+	X1	X2	X3	X4 	o
+	1	0	1	1	1
+	0	1	0	1	1
+	0	0	1	0	-1
+	0	0	0	1	1
+	0	0	1	1	1
+	0	0	0	0	-1
+	1	0	1	0	1
+	1	1	0	0	1
+	1	1	1	1	1
+	1	1	1	0	1
+	0	1	0	0	-1
+	0	1	1	0	-1
+	0	1	1	1	1
+	1	0	0	0	1
+	1	1	0	1	1
+
+2. Although my classifier was correct towards the original dataset, when the additional 13 sets were introduced only one of these were classified correctly, thus over the new set of size 17, 4/16 or 25% were classified correctly. 
+3. There is no linear classification for this extended set that results in a 100% correct classification. The one that I found which sorts it with a success rate of 75% is 
+w1X1 + w2X2 + w3X3 + w4X4 + b = o with the following values. 
+	w1 = 2
+	w2 = 0
+	w3 = 0
+	w4 = 2
+	b  = -1
+There is no possible example that correctly classifies the entire set as we can see with certainty in row 6 that b must be -1 and then using this information we can tell that w4 is 2 based on row 4 and that w1 is 2 based on row 14. Thus with these three values known it is impossible to correctly classify every row. 
