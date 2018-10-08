@@ -32,7 +32,7 @@ I found the linear classifier to be w1X1 + w2X2 + w3X3 + w4X4 + b = o with the f
 
 2. Although my classifier was correct towards the original dataset, when the additional 13 sets were introduced only one of these were classified correctly, thus over the new set of size 17, 4/16 or 25% were classified correctly. 
 3. There is no linear classification for this extended set that results in a 100% correct classification. The one that I found which sorts it with a success rate of 75% is 
-w1X1 + w2X2 + w3X3 + w4X4 + b = o with the following values. 
+w_{1}X_{1} + w2X2 + w3X3 + w4X4 + b = o with the following values. 
 	w1 = 2
 	w2 = 0
 	w3 = 0
