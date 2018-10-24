@@ -13,6 +13,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 #import the dataset
+#Splitting the set based on Sign and Name
 dataset = pd.read_csv("training.data", names = ['Sign'])
 dataset[['Sign','Name']] = dataset["Sign"].str.split(" ", 1, expand=True)
 X = dataset.iloc[: , 1:2].values
@@ -32,7 +33,10 @@ regressor.fit(X, Y)
 y_pred = regressor.predict(X)
 
 #Prediction using test set
+
+#Importing data
 testingSet = pd.read_csv("test.data", names = ['Sign'])
+#Splitting the set based on Sign and Name
 testingSet[['Sign','Name']] = testingSet['Sign'].str.split(" ", 1, expand = True)
 XTest = testingSet.iloc[: , 1:2].values
 YTest = testingSet.iloc[: , 0:1].values
@@ -48,4 +52,9 @@ regressorTest.fit(XTest, YTest)
 
 y_test_pred = regressorTest.predict(XTest)
 
+X_grid = np.arange(min(X), max(X), 0.01)
+X_grid = X_grid.reshape((len(X_grid), 1))
+plt.scatter(X,Y, color = 'red')
+plt.plot(X_grid, regressor.predict(X_grid), color = 'blue')
+plt.show()
 
